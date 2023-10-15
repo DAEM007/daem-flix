@@ -10,6 +10,10 @@ function SignupScreen() {
             <input type='password' placeholder='Password'/>
             <button type='submit'>Sign In</button>
             
+            <h4>
+              <span className='signupScreen__gray'>New to Netflix? </span>
+              Sign Up now
+            </h4>
         </form>
     </div>
   )
