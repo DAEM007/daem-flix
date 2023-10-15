@@ -2,6 +2,9 @@ import React from 'react';
 import "./SignupScreen.css";
 
 function SignupScreen() {
+
+  // 2:14:30
+
   return (
     <div className='signupScreen'>
         <form>
@@ -12,7 +15,7 @@ function SignupScreen() {
             
             <h4>
               <span className='signupScreen__gray'>New to Netflix? </span>
-              Sign Up now
+              <span className='signupScreen__link'>Sign Up now</span>
             </h4>
         </form>
     </div>
