@@ -9,7 +9,7 @@ function SignupScreen() {
             <input type='email' placeholder='Email'/>
             <input type='password' placeholder='Password'/>
             <button type='submit'>Sign In</button>
-            {/* 2:06:00 */}
+            
         </form>
     </div>
   )
