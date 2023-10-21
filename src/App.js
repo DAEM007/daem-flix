@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import { Counter } from './features/counterSlice';
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import { 
@@ -10,22 +9,32 @@ import {
 import LoginScreen from './screens/LoginScreen';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (user) => {
-      if (user) {
+    const unsub = onAuthStateChanged(auth, (userAuth) => {
+      if (userAuth) {
         //logged in
-        console.log(user);
+        console.log(userAuth);
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+          })
+        )
       } else {
         //logged out
+        dispatch(logout);
       }
     });
 
     return unsub;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">
