@@ -11,6 +11,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
   const user = useSelector(selectUser);
@@ -41,8 +42,11 @@ function App() {
       <Router>
         { !user ? <LoginScreen /> : (
           <Switch>
-            <Route exact path="/">
+            <Route exact path ="/">
               <HomeScreen />
+            </Route>
+            <Route path = "/profile">
+              <ProfileScreen />
             </Route>
           </Switch>
         ) }
