@@ -1,6 +1,6 @@
 # Project Title: daem-flix Movie Streaming Platform
 
-[alt text](https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png)
+![alt text](https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png)
 
 ## Table of Contents
 1. [Introduction](#introduction)
