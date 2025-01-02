@@ -1,18 +1,19 @@
 .loginScreen {
   position: relative;
-  height: 100%;
+  height: 100vh;
 }
 
 .loginScreen__background {
   background: url("https://cdn.wallpapersafari.com/24/74/zgeTuV.jpg") center
     no-repeat;
   background-size: cover;
+  height: 100%;
 }
 
 .loginScreen__gradient {
   width: 100%;
   z-index: 1;
-  height: 100vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
     to top,
@@ -45,7 +46,7 @@
 
 .loginScreen__body {
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 0;
   right: 0;
   margin-left: auto;

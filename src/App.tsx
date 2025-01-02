@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginScreen from "./screens/LoginScreen";
+import LandingScreen from "./screens/LandingScreen";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,7 +37,7 @@ function App() {
     <div className="app">
       <Router>
         {!user ? (
-          <LoginScreen />
+          <LandingScreen />
         ) : (
           <Routes>
             <Route path="/" element={<HomeScreen />} />
