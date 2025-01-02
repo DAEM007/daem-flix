@@ -1,12 +1,17 @@
 .signupScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 300px;
-  padding: 70px;
+  padding-block: 20px;
+  padding-inline: 40px;
   margin-left: auto;
   margin-right: auto;
   background: rgba(0, 0, 0, 0.85);
 }
 
 .signupScreen form {
+  width: 100%;
   display: grid;
   flex-direction: column;
 }
